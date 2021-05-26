@@ -1,0 +1,23 @@
+﻿Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Increased_Cost Estimate,US East (Ohio),,Amazon EC2,0,9567.34,114808.08,USD,"Operating system (Linux), Storage amount (200 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 8), Advance EC2 instance (c4.8xlarge), Pricing strategy (On-Demand), Snapshot Frequency (2x Daily), Amount changed per snapshot (3 GB)"
+Increased_Cost Estimate,US East (Ohio),rds,Amazon RDS for MySQL,0,3816.6,45799.20,USD,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (7000 GB), Quantity (2), Instance type (db.m5.large), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (1 TB)"
+Increased_Cost Estimate,US East (Ohio),,Amazon EC2,0,2032.5720000000001,24390.86,USD,"Operating system (Linux), Storage amount (200 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 8), Advance EC2 instance (t3a.2xlarge), Pricing strategy (On-Demand), Snapshot Frequency (2x Daily), Amount changed per snapshot (3 GB)"
+Increased_Cost Estimate,US East (Ohio),,S3 Standard,0,230,2760.00,USD,S3 Standard storage (10000 GB per month)
+Increased_Cost Estimate,US East (Ohio),,S3 Glacier,0,40,480.00,USD,S3 Glacier storage (10000 GB per month)
+Increased_Cost Estimate,US East (Ohio),,S3 Glacier Deep Archive,0,9.9,118.80,USD,S3 Glacier Deep Archive storage (10000 GB per month)
+Increased_Cost Estimate,US East (Ohio),,Data Transfer,0,0,0.00,USD,
+Increased_Cost Estimate,US East (Ohio),,Application Load Balancer,0,600.43,7205.16,USD,Number of Application Load Balancers (1)
+Increased_Cost Estimate,US East (Ohio),,Network Load Balancer,0,1330.43,15965.16,USD,"Number of Network Load Balancers (1), Processed bytes per NLB for TCP (100 GB per hour), Processed bytes per NLB for TLS (100 GB per hour), Processed bytes per NLB for UDP (100 GB per hour)"
+Increased_Cost Estimate,US East (Ohio),,Amazon Virtual Private Cloud (VPC),0,361.35,4336.20,USD,Number of NAT Gateways (1)
+Increased_Cost Estimate,US East (Ohio),,Amazon ElastiCache,0,1887.78,22653.36,USD,( 3 instances of type Memcached  Memory optimized  cache r5.2xlarge  OnDemand )
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
+
+Changes made: 
+Added S3 Glacier to implement life cycle policies on Data.
+Added network loadbalancer.
+Increased the number and power of ec2 instances to handle greater load.
+Added ElastiCache to help reduce load on database when many identical queries are being sent.
