@@ -1,15 +1,17 @@
 ﻿Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
-Increased_Cost Estimate,US East (Ohio),,Amazon EC2,0,9567.34,114808.08,USD,"Operating system (Linux), Storage amount (200 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 8), Advance EC2 instance (c4.8xlarge), Pricing strategy (On-Demand), Snapshot Frequency (2x Daily), Amount changed per snapshot (3 GB)"
-Increased_Cost Estimate,US East (Ohio),rds,Amazon RDS for MySQL,0,3816.6,45799.20,USD,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (7000 GB), Quantity (2), Instance type (db.m5.large), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (1 TB)"
-Increased_Cost Estimate,US East (Ohio),,Amazon EC2,0,2032.5720000000001,24390.86,USD,"Operating system (Linux), Storage amount (200 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 8), Advance EC2 instance (t3a.2xlarge), Pricing strategy (On-Demand), Snapshot Frequency (2x Daily), Amount changed per snapshot (3 GB)"
-Increased_Cost Estimate,US East (Ohio),,S3 Standard,0,230,2760.00,USD,S3 Standard storage (10000 GB per month)
-Increased_Cost Estimate,US East (Ohio),,S3 Glacier,0,40,480.00,USD,S3 Glacier storage (10000 GB per month)
-Increased_Cost Estimate,US East (Ohio),,S3 Glacier Deep Archive,0,9.9,118.80,USD,S3 Glacier Deep Archive storage (10000 GB per month)
-Increased_Cost Estimate,US East (Ohio),,Data Transfer,0,0,0.00,USD,
-Increased_Cost Estimate,US East (Ohio),,Application Load Balancer,0,600.43,7205.16,USD,Number of Application Load Balancers (1)
-Increased_Cost Estimate,US East (Ohio),,Network Load Balancer,0,1330.43,15965.16,USD,"Number of Network Load Balancers (1), Processed bytes per NLB for TCP (100 GB per hour), Processed bytes per NLB for TLS (100 GB per hour), Processed bytes per NLB for UDP (100 GB per hour)"
-Increased_Cost Estimate,US East (Ohio),,Amazon Virtual Private Cloud (VPC),0,361.35,4336.20,USD,Number of NAT Gateways (1)
-Increased_Cost Estimate,US East (Ohio),,Amazon ElastiCache,0,1887.78,22653.36,USD,( 3 instances of type Memcached  Memory optimized  cache r5.2xlarge  OnDemand )
+My Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,4094.66,49135.92,USD,"Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (7000 GB), Provisioning IOPS (10000), Quantity (1), Instance type (db.m5.large), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (1000 GB)"
+My Estimate,US East (N. Virginia),,Amazon EC2,0,1362.506,16350.07,USD,"Operating system (Linux), Storage amount (2000 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 4), Advance EC2 instance (t3.xlarge), Pricing strategy (All Reserved 1 Year  None upfront), Snapshot Frequency (2x Daily), Amount changed per snapshot (3 GB), General Purpose SSD (gp3) - IOPS (3000), General Purpose SSD (gp3) - Throughput (125 MBps)"
+My Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,4094.66,49135.92,USD,"Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (7000 GB), Provisioning IOPS (10000), Quantity (1), Instance type (db.m5.large), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (1000 GB)"
+My Estimate,US East (N. Virginia),,Amazon EC2,0,1962.83,23553.96,USD,"Operating system (Linux), Storage amount (2000 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 4), Advance EC2 instance (c5.2xlarge), Pricing strategy (All Reserved 1 Year  None upfront), Snapshot Frequency (2x Daily), General Purpose SSD (gp3) - IOPS (10000), Amount changed per snapshot (3 GB), General Purpose SSD (gp3) - Throughput (1000 MBps)"
+My Estimate,US East (N. Virginia),,S3 Standard,0,230,2760.00,USD,S3 Standard storage (10000 GB per month)
+My Estimate,US East (N. Virginia),,Data Transfer,0,0,0.00,USD,
+My Estimate,US East (N. Virginia),,Application Load Balancer,0,74.83,897.96,USD,Number of Application Load Balancers (1)
+My Estimate,US East (N. Virginia),,Network Load Balancer,0,71.18,854.16,USD,"Number of Network Load Balancers (1), Average number of new TCP connections (10000 per second)"
+My Estimate,US East (N. Virginia),,Amazon Virtual Private Cloud (VPC),0,347.85,4174.20,USD,Number of NAT Gateways (1)
+My Estimate,US East (N. Virginia),,Amazon ElastiCache,0,7191.96,86303.52,USD,Nodes ( 3 instances of type Redis  Memory optimized  cache r6g.8xlarge  OnDemand )
+My Estimate,US East (N. Virginia),,S3 Glacier Flexible Retrieval,0,3.62,43.44,USD,"S3 Glacier Average Object Size (16 MB), S3 Glacier storage (1000 GB per month)"
+My Estimate,US East (N. Virginia),,S3 Glacier Deep Archive,0,1,12.00,USD,"S3 Glacier Deep Archive Average Object Size (16 MB), S3 Glacier Deep Archive storage (1000 GB per month)"
+My Estimate,US East (N. Virginia),,Data Transfer,0,0,0.00,USD,
 
 
 
@@ -18,6 +20,5 @@ Acknowledgement
 
 Changes made: 
 Added S3 Glacier to implement life cycle policies on Data.
-Added network loadbalancer.
-Increased the number and power of ec2 instances to handle greater load.
+Upgraded database to use Provisioned IOPS SSD
 Added ElastiCache to help reduce load on database when many identical queries are being sent.
